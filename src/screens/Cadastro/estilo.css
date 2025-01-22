@@ -1,0 +1,113 @@
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
+    background-color: black;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    gap: 40px;
+    padding: 20px;
+    color: white;
+    flex-wrap: wrap; /* Permite que os elementos se ajustem em telas menores */
+    margin-top: -20px; /* Subir a área toda, incluindo a logo e o formulário */
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 400px;
+    margin-bottom: 20px; /* Distância de 20px entre a logo e o formulário */
+    margin-right: 100px;
+}
+
+.logo {
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    border-radius: 10px; /* Opcional para um visual mais agradável */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+.formulario {
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 400px;
+    margin-top: -20px; /* Subir o formulário em relação à sua posição original */
+}
+
+form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form label {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+    font-size: 14px;
+}
+
+form input {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #ff6600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #ff4500;
+}
+
+p {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+/* Estilo para o botão de voltar */
+button[type="button"] {
+    background-color: #444; /* Cor de fundo para o botão de voltar */
+    margin-top: 10px;
+}
+
+button[type="button"]:hover {
+    background-color: #333; /* Cor ao passar o mouse no botão de voltar */
+}
+
+/* Ajuste responsivo */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .logo-container {
+        max-width: 300px;
+        margin-left: 100px;
+    }
+
+    .formulario {
+        width: 90%;
+    }
+}
